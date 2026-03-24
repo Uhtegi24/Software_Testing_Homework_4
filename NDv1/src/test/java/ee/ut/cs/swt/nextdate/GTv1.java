@@ -3,40 +3,7 @@ package ee.ut.cs.swt.nextdate;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import static org.junit.Assert.*;
-import org.junit.AfterClass;
-import org.junit.Test;
-
-public class MTv1 {
-	
-	private NextDate trialDate = new NextDate(3,4,1976);
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	//@Test
-	/*
-	 * Test method for 'ee.ut.cs.swt.nextdate.NextDate.run(int, int, int)'
-	 */
-	
-	@Test
-	public final void testJuneToJuly(){
-	assertEquals("7/1/2001", trialDate.run(6, 30, 2001));
-	}
-	
-	@Test
-	public final void testMarchToApril(){
-	assertEquals("4/1/2001", trialDate.run(3, 31, 2001));
-	}
-
-	@Test
-	public final void testDecemberToJanuary(){ assertEquals("Invalid Next Year", trialDate.run(12, 31, 2021)); }
-
-	@Test
-	public final void testLeapYear(){
-		assertEquals("2/29/2004", trialDate.run(2, 28, 2004));
-	}
+public class GTv1 {
 
 	@Test(timeout = 4000)
 	public void testCreatesNextDate1() throws Throwable {
@@ -61,9 +28,9 @@ public class MTv1 {
 
 	@Test(timeout = 4000)
 	public void testCreatesNextDate2() throws Throwable {
-	    NextDate nextDate0 = new NextDate(5, 5, 5);
-	    String string0 = nextDate0.run(5, 5, 1837);
-	    assertEquals("5/6/1837", string0);
+	    NextDate nextDate0 = new NextDate(8, 8, 8);
+	    String string0 = nextDate0.run(8, 8, 1826);
+	    assertEquals("8/9/1826", string0);
 	}
 
 	@Test(timeout = 4000)
@@ -124,9 +91,9 @@ public class MTv1 {
 
 	@Test(timeout = 4000)
 	public void testCreatesNextDate13() throws Throwable {
-	    NextDate nextDate0 = new NextDate(8, 8, 8);
-	    String string0 = nextDate0.run(8, 8, 1826);
-	    assertEquals("8/9/1826", string0);
+	    NextDate nextDate0 = new NextDate(5, 5, 5);
+	    String string0 = nextDate0.run(5, 31, 1837);
+	    assertEquals("6/1/1837", string0);
 	}
 
 	@Test(timeout = 4000)
@@ -174,8 +141,8 @@ public class MTv1 {
 	@Test(timeout = 4000)
 	public void testCreatesNextDate12() throws Throwable {
 	    NextDate nextDate0 = new NextDate(3, 3, 3);
-	    String string0 = nextDate0.run(3, 3, 1826);
-	    assertEquals("3/4/1826", string0);
+	    String string0 = nextDate0.run(3, 3, 2000);
+	    assertEquals("3/4/2000", string0);
 	}
 
 	@Test(timeout = 4000)
