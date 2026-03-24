@@ -91,15 +91,15 @@ public class NextDate {
 				}
 				else if(day == 29){ //29th date of February
 					// step 2. To enable leap year functionality , uncomment lines 94-97 and 99
-//					if(isLeapYear(year)){  //AND a leap year - reset the day to 1, month to 3
-//						tomorrowDay = 1;
-//						tomorrowMonth = 3;
-//					}
+					if(isLeapYear(year)){  //AND a leap year - reset the day to 1, month to 3
+						tomorrowDay = 1;
+						tomorrowMonth = 3;
+					}
 					// To seed "Fault 4", comment out the lines 99-100
 //					else
-						return "Invalid Input Date";
+//						return "Invalid Input Date";
 				}
-				//
+
 				else if(day > 29) //invalid input as February will never have more than 29 days
 					return "Invalid Input Date";
 			}
